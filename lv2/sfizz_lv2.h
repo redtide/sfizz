@@ -8,6 +8,7 @@
 
 #define DEFAULT_SFZ_FILE "/home/paul/Documents/AVL_Percussions/AVL_Drumkits_Percussion-1.0-Alt.sfz"
 #define SFIZZ_URI "http://sfztools.github.io/sfizz"
+#define SFIZZ_UI_URI "http://sfztools.github.io/sfizz#ui"
 #define SFIZZ_PREFIX SFIZZ_URI "#"
 #define SFIZZ__sfzFile "http://sfztools.github.io/sfizz:sfzfile"
 #define SFIZZ__scalaFile "http://sfztools.github.io/sfizz:scalafile"
