@@ -218,12 +218,10 @@ static std::vector<char *> createForkEnviron()
     return newEnv;
 }
 
-static constexpr char zenityPath[] = "/usr/bin/zenity";
-
 bool askQuestion(const char *text)
 {
     char *argv[] = {
-        const_cast<char *>(zenityPath),
+        const_cast<char *>(g_find_program_in_path("zenity")),
         const_cast<char *>("--question"),
         const_cast<char *>("--text"),
         const_cast<char *>(text),
@@ -256,7 +254,7 @@ bool askQuestion(const char *text)
 
 bool isZenityAvailable()
 {
-    return access(zenityPath, X_OK) == 0;
+    return g_find_program_in_path("zenity") != nullptr;
 }
 
 std::string getOperatingSystemName()
